@@ -1,4 +1,3 @@
-/* Tổng quát */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,7 +10,6 @@ body {
     min-height: 100vh;
 }
 
-/* Container */
 .container {
     text-align: center;
     padding: 20px;
@@ -22,14 +20,12 @@ body {
     max-width: 400px;
 }
 
-/* Tiêu đề */
 h1 {
     color: #d47782;
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
-/* Khung canvas */
 .frame-container {
     margin: 0 auto 15px auto;
     position: relative;
@@ -42,14 +38,12 @@ h1 {
     aspect-ratio: 1 / 1; /* Tỉ lệ 1:1 */
 }
 
-/* Canvas */
 canvas {
     display: block;
     width: 100%;
     height: 100%; /* Đảm bảo luôn khớp khung */
 }
 
-/* Input và Button */
 input[type="file"], button {
     display: block;
     margin: 10px auto;
@@ -73,7 +67,6 @@ button:hover, input[type="file"]:hover {
     background-color: #c06a74;
 }
 
-/* Responsive cho điện thoại */
 @media (max-width: 768px) {
     .container {
         width: 95%;
