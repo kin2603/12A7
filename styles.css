@@ -25,47 +25,48 @@ body {
 /* Tiêu đề */
 h1 {
     color: #d47782;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
 /* Khung canvas */
 .frame-container {
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto;
     position: relative;
     background: #f8d7da;
     border: 5px solid #d47782;
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px; /* Giới hạn chiều rộng khung */
+    aspect-ratio: 1 / 1; /* Tỉ lệ 1:1 */
 }
 
 /* Canvas */
 canvas {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%; /* Đảm bảo luôn khớp khung */
 }
 
 /* Input và Button */
 input[type="file"], button {
     display: block;
     margin: 10px auto;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 10px 15px;
+    font-size: 0.9rem; /* Nhỏ hơn để phù hợp */
     color: #fff;
     background-color: #d47782;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 80%; /* Tương thích trên các thiết bị nhỏ */
+    max-width: 200px;
 }
 
 input[type="file"] {
     background-color: #d9a7ab;
     color: #fff;
-    padding: 5px;
-    text-align: center;
 }
 
 button:hover, input[type="file"]:hover {
@@ -77,13 +78,21 @@ button:hover, input[type="file"]:hover {
     .container {
         width: 95%;
         max-width: 350px;
+        padding: 15px;
     }
 
     h1 {
         font-size: 1.5rem;
+        margin-bottom: 10px;
     }
 
-    canvas {
-        max-width: 250px;
+    .frame-container {
+        max-width: 220px; /* Giảm kích thước khung */
+    }
+
+    input[type="file"], button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        max-width: 180px;
     }
 }
