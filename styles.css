@@ -1,87 +1,89 @@
-/* Đặt phông nền tổng quan */
+/* Tổng quát */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffecec;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #ffe6e9, #ffdde1);
 }
 
-/* Vùng chứa tổng thể */
+/* Container */
 .container {
     text-align: center;
-    background: #fffafc;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     width: 90%;
-    max-width: 600px;
+    max-width: 400px;
 }
 
 /* Tiêu đề */
 h1 {
-    color: #d96a87;
+    color: #d47782;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-/* Vùng khung ảnh */
-.frame {
-    width: 500px;
-    height: 500px;
-    border: 15px solid #ffc2d1; /* Màu hồng kem */
-    border-radius: 20px;
+/* Khung canvas */
+.frame-container {
+    margin: 0 auto 20px auto;
     position: relative;
-    margin: 20px auto;
+    background: #f8d7da;
+    border: 5px solid #d47782;
+    border-radius: 10px;
     overflow: hidden;
-    background: #ffeef3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-canvas {
     width: 100%;
-    height: 100%;
+    max-width: 300px;
+}
+
+/* Canvas */
+canvas {
     display: block;
-    border-radius: 20px;
+    width: 100%;
+    height: auto;
 }
 
-/* Nút và input */
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-#upload {
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #fff;
-    background: #d96a87;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#upload:hover {
-    background: #c85a76;
-}
-
-#download {
+/* Input và Button */
+input[type="file"], button {
+    display: block;
+    margin: 10px auto;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
-    background: #d96a87;
+    background-color: #d47782;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-#download:hover {
-    background: #c85a76;
+input[type="file"] {
+    background-color: #d9a7ab;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+button:hover, input[type="file"]:hover {
+    background-color: #c06a74;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    canvas {
+        max-width: 250px;
+    }
 }
